@@ -5,4 +5,4 @@ local ok,err=pcall(function()
  assert(fn,compileError)
  fn()
 end)
-if not ok then warn('[LUCK V10] '..tostring(err)) end
+if not ok then warn('[LUCK V11] '..tostring(err)) end

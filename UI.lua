@@ -1,7 +1,7 @@
 local M={}
 function M.create()
  local gui=Instance.new('ScreenGui')
- gui.Name='LuckBrainrotV10';gui.ResetOnSpawn=false;gui.DisplayOrder=400
+ gui.Name='LuckBrainrotV11';gui.ResetOnSpawn=false;gui.DisplayOrder=400
  gui.Parent=game:GetService('Players').LocalPlayer:WaitForChild('PlayerGui')
  local frame=Instance.new('Frame')
  frame.Size=UDim2.fromOffset(280,180);frame.Position=UDim2.new(.5,-140,.22,0)
@@ -18,13 +18,13 @@ function M.create()
   if button then Instance.new('UICorner',v).CornerRadius=UDim.new(0,8) end
   return v
  end
- local title=add('LUCK BRAINROT V10',5,32,false)
+ local title=add('LUCK BRAINROT V11',5,32,false)
  local toggle=add('DETECTAR: OFF',42,40,true)
  local status=add('Aguardando ativacao...',88,84,false)
  local action=Instance.new('TextButton')
  action.Size=UDim2.fromOffset(190,48);action.AnchorPoint=Vector2.new(.5,1)
  action.Position=UDim2.new(.5,0,.87,0);action.BackgroundColor3=Color3.fromRGB(25,175,75)
- action.Text='VER GRAB';action.TextColor3=Color3.new(1,1,1)
+ action.Text='STEAL';action.TextColor3=Color3.new(1,1,1)
  action.Font=Enum.Font.GothamBlack;action.TextSize=18;action.Visible=false;action.Parent=gui
  Instance.new('UICorner',action).CornerRadius=UDim.new(0,10)
  local UIS=game:GetService('UserInputService')

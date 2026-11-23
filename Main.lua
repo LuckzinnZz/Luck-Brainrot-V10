@@ -1,6 +1,6 @@
 local base='https://raw.githubusercontent.com/LuckzinnZz/Luck-Brainrot-V10/main/'
 local env=(type(getgenv)=='function' and getgenv()) or _G
-if env.LuckBrainrotV10Stop then pcall(env.LuckBrainrotV10Stop) end
+if env.LuckBrainrotV11Stop then pcall(env.LuckBrainrotV11Stop) end
 local function requireRemote(name)
  local source=game:HttpGet(base..name)
  local fn,err=loadstring(source)
@@ -20,11 +20,11 @@ end)
 connections[#connections+1]=ui.action.MouseButton1Click:Connect(function()
  if not enabled or not target then return end
  if not prompt then
-  ui.status.Text='Grab nao encontrado neste Brainrot.'
+  ui.status.Text='STEAL indisponivel: Grab nao encontrado.'
  elseif not prompt.Enabled then
-  ui.status.Text='Grab desativado pelo servidor. Sem transferencia.'
+  ui.status.Text='STEAL bloqueado: Grab desativado no jogo.'
  else
-  ui.status.Text='Grab disponivel. Use a interacao normal do jogo.'
+  ui.status.Text='STEAL: Grab disponivel. Use a interacao original do jogo.'
  end
 end)
 task.spawn(function()
@@ -40,10 +40,10 @@ task.spawn(function()
   task.wait(.3)
  end
 end)
-env.LuckBrainrotV10Stop=function()
+env.LuckBrainrotV11Stop=function()
  running=false
  for _,connection in ipairs(connections) do connection:Disconnect() end
  ui.cleanup()
- env.LuckBrainrotV10Stop=nil
+ env.LuckBrainrotV11Stop=nil
 end
-print('[LUCK V10] Painel carregado; nao transfere Brainrots.')
+print('[LUCK V11] Painel STEAL carregado; nao altera propriedade no servidor.')
